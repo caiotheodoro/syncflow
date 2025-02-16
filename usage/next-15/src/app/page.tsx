@@ -3,7 +3,7 @@
 import { TodoItem } from '@/components/TodoItem'
 import { syncConfig } from '@/lib/sync-config'
 import { Todo } from '@/types/todo'
-import { SyncProvider, useSync } from 'syncflow-engine'
+import { SyncProvider, useSync, SyncOperation } from 'syncflow-engine'
 import { v4 as uuidv4 } from 'uuid'
 import { useState, useEffect } from 'react'
 
@@ -12,7 +12,7 @@ const TodoList = () => {
   const [todos, setTodos] = useState<Todo[]>([])
   const [newTodo, setNewTodo] = useState('')
   const [isOffline, setIsOffline] = useState(false)
-  const [pendingOps, setPendingOps] = useState<any[]>([])
+  const [pendingOps, setPendingOps] = useState<SyncOperation[]>([])
   const [showPending, setShowPending] = useState(true)
 
   useEffect(() => {

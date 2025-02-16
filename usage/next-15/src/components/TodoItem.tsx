@@ -2,7 +2,7 @@
 
 import { Todo } from '@/types/todo'
 import { motion } from 'framer-motion'
-import { CheckCircle2, Circle, Clock, Edit3, Trash2 } from 'lucide-react'
+import { Edit3, Trash2 } from 'lucide-react'
 import { useState } from 'react'
 
 type TodoItemProps = {
