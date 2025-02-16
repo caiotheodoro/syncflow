@@ -1,0 +1,59 @@
+{
+  "name": "syncflow-engine",
+  "version": "1.0.8",
+  "description": "A flexible and robust data synchronization library for JavaScript applications",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run build",
+    "version": "git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/caiotheodoro/syncflow.git"
+  },
+  "bugs": {
+    "url": "https://github.com/caiotheodoro/syncflow/issues"
+  },
+  "homepage": "https://github.com/caiotheodoro/syncflow#readme",
+  "keywords": [
+    "sync",
+    "synchronization",
+    "offline-first",
+    "data-sync",
+    "react",
+    "nextjs",
+    "typescript"
+  ],
+  "author": "Caio Theodoro",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^4.9.0",
+    "jest": "^29.0.0",
+    "@types/jest": "^29.0.0",
+    "@types/react": "^18.0.0",
+    "@types/node": "^18.0.0",
+    "@testing-library/react": "^14.0.0",
+    "@testing-library/jest-dom": "^6.0.0",
+    "ts-jest": "^29.1.1",
+    "jest-environment-jsdom": "^29.0.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  },
+  "dependencies": {
+    "uuid": "^9.0.0"
+  }
+}
